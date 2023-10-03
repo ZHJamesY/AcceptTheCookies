@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Accept the Cookies</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <script src="https://kit.fontawesome.com/cd56e8ce0b.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script src="./js/contact.js"></script>
+        <script src="./script/accessIndex.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-fixed-top">
+            <div>
+                <a class="navbar-brand text-white">
+                    <img class="px-1" src="images/cookieNavbar.png" alt="Company Logo" width="200">
+                </a>
+            </div>
+
+            <div>
+                <ul class="navbar-nav">
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessIndex.html" >Home</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessProduct.html">Products</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessAbout.html">About Us</a>
+                    </li>
+                    <li class = "nav-item active">
+                        <a class = "nav-link" href = "accessContact.html" id = "active">Contact Us</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessPoll.html">Poll</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessGroupMembers.html">Creators</a>
+                    </li>
+                        <!-- access dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                My Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/accountInfo">Account</a>
+                                <a class="dropdown-item" href="/logout">Sign out</a>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row text">
+            <!-- Email, phone number, socials and hours of operation -->
+            <div class="column text-center">
+                <div>
+                   <h1>Contact Us</h1> 
+                   <p>(905)-721-8668<br>
+                    contact@acceptthecookies.com
+                   </p>
+                </div>
+                <div>
+                    <h1>Regular Hours</h1> 
+                    <p>Mon: 11:00 am - 6:00 pm<br>
+                    Tues: 10:00 am - 6:00 pm<br>
+                    Wed: 10:00 am - 6:00 pm<br>
+                    Thurs: 10:00 am - 6:00 pm<br>
+                    Fri: 10:00 am - 8:00 pm<br>
+                    Sat: 10:00 am - 8:00 pm<br>
+                    Sun: 9:30 am - 7:30 pm
+                    </p>
+                </div>
+                <div>
+                    <h1>Store Location</h1>
+                    <p>Ontario Tech University <br>
+                        2000 Simcoe Street North <br>
+                        Oshawa, Ontario, Canada <br>
+                        L1G 0C5</p> 
+                </div>
+                <div>
+                    <h1>Socials</h1> 
+                    <p>
+                        <i class="fa-brands fa-instagram"></i> @Accept_the_Cookies <br>
+                        <i class="fa-brands fa-facebook"></i> @AcceptTheCookies <br>
+                        <i class="fa-brands fa-tiktok"></i> @accept_the_cookies <br>
+                        <i class="fa-brands fa-twitter"></i> @AcceptTheCookies
+                    </p>
+                </div>
+                
+            </div>
+            <div class="column2">
+                <!-- Customer feedback form  -->
+                <h2>Send us a message:</h2>
+                <h6 id="warning">Please make sure the starred (*) sections are completed</h6>
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Name: *</label>
+                        <input type="name" class="form-control" id="nameInput" placeholder="Name">
+                      </div>
+                    <div class="form-group">
+                      <label for="emailInput" id="emailTitle">Email address: *</label>
+                      <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumberInput" id="phoneNumberTitle">Phone Number: *</label>
+                        <input type="phoneNumber" class="form-control" id="phoneNumberInput" name="phone" placeholder="(###)-###-####">
+                      </div>
+                    <div class="form-group">
+                      <label for="purposeChoice">Purpose: *</label>
+                      <select class="form-select" id="purposeSelect">
+                        <option selected>Suggestions</option>
+                        <option value="1">Complaints</option>
+                        <option value="2">Request a Quote</option>
+                        <option value="3">Order Request</option>
+                        <option value="4">Career Opportunities</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="messageInput">Message: *</label>
+                      <textarea class="form-control" id="messageInput" rows="5"></textarea>
+                    </div>
+                    <button class="btn" type="button" id="submitMessage" onclick="saveRecord()">Submit</button>
+                    <div id="jsonDownload"></div>
+                  </form>
+                <!-- Map showing location of store  -->
+                <div class="map">
+                    <h2>Where to find us:</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.663236167787!2d-78.89898064909399!3d43.94564277900989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51b9a6af8ae7f%3A0x2a373a19593716f5!2sOntario%20Tech%20University!5e0!3m2!1sen!2sca!4v1681177726916!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

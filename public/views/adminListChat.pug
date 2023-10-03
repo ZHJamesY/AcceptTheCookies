@@ -1,0 +1,23 @@
+html 
+    head
+        title= title 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src='/socket.io/socket.io.js')
+        script(src='https://code.jquery.com/jquery-3.6.3.min.js')
+        script(src='./script/chat.js')
+        link(rel="stylesheet", href="./css/adminChat.css")
+
+    body 
+        .liveChat
+            button.open-button(id="open_button", onclick="openForm()") Live Chat
+            .chat-popup#myForm
+                form.form-container
+                label(for="msg") #{'Chat'}
+                #waitlist-container.waitList-white Adjust height text
+                textarea#chat-log(name="chatLog", readonly="")
+                textarea#message-input(name="chatInput", placeholder="Type message..")
+                button.btn#send-button(type="button") Send
+                button.btn.cancel#close-button(type="button", onclick="closeForm()") Close
+

@@ -1,0 +1,14 @@
+[
+    {
+        "choice":"Yes",
+        "votes":3
+    },
+    {
+        "choice":"No",
+        "votes":2
+    },
+    {
+        "choice":"Don't Know",
+        "votes":1
+    }
+]

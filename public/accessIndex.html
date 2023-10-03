@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Accept the Cookies</title>
+
+        <!-- Used code snippets from Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script src="./script/accessIndex.js"></script>
+        <script src="./script/chat.js"></script>
+        <link rel="stylesheet" href="./css/chat.css">
+    </head>
+    <body>
+        <div id = "main-section">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-fixed-top">
+                <div>
+                    <a class="navbar-brand text-white">
+                        <img class="px-1" src="images/cookieNavbar.png" alt="Company Logo" width="200">
+                    </a>
+                </div>
+
+                <div>
+                    <ul class="navbar-nav">
+                        <li class = "nav-item active">
+                            <a class = "nav-link" href = "accessIndex.html" id = "active">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "accessProduct.html">Products</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "accessAbout.html">About Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "accessContact.html">Contact Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "accessPoll.html">Poll</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "accessGroupMembers.html">Creators</a>
+                        </li>
+                        <!-- access dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                My Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/accountInfo">Account</a>
+                                <a class="dropdown-item" href="/logout">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="jumbotron main-hero section-light">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <h1 class="display-5 pt-5"><span>Accept The<br>Cookies!</span></h1>
+                    </div>
+                    
+                    <div class="col-md-6 text-center">
+                        <img class="w-25 pb-5" src="images/cookie.svg" alt="Cookie">
+                        <h3>Providing your friends and family<br>with amazing treats since 2013!</h3>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="accessProduct.html" role="button">View our Products</a>
+                        </p>
+                    </div>
+                </div>
+            </div>              
+
+            <hr>
+
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide w-75 h-50 mx-auto" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/CookieWallpaper1.png" alt="First slide">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Freshly-Baked Cookies</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/CookieWallpaper2.png" alt="Second slide">
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cookies For Any Occasion</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/CookieWallpaper3.png" alt="Third slide">
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Enjoy With Loved Ones</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <hr>
+
+            <!-- Three Selling Points -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="jumbotron section-light text-center">
+                            <h3>Made By<br>PROFESSIONALS</h3>
+                            <img id="professional-chef-image" src="images/chef.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="px-5 jumbotron section-light text-center">
+                            <h3>Made With<br>LOVE</h3>
+                            <img id="professional-chef-image" src="images/Heart.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="jumbotron section-light text-center">
+                            <h3>Made For<br>YOU</h3>
+                            <img id="professional-chef-image" src="images/EatingCookies.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- About -->
+            <div class="jumbotron main-hero section-light">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class=" text-center">
+                            <img class="pb-5" src="images/about.png" alt="Cookie" width="150px">
+                            <h3>Want to know how it all started?</h3>
+                            <p>Learn about the greatest origin story for a cookie company!</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="accessAbout.html" role="button">About Us</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class=" text-center">
+                            <img class="pb-5" src="images/contact.png" alt="Cookie" width="150px">
+                            <h3>Any doubts you want us to clear?</h3>
+                            <p>Let's get that sorted!</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="accessContact.html" role="button">Contact Us</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- live chat button  -->
+            <div class="liveChat">
+                <button class="open-button" id="open_button" onclick="openForm()">Live Chat</button>
+
+                <div class="chat-popup" id="myForm">
+                <form class="form-container">
+                    <label for="msg"><b>Chat</b></label>
+                    <div id="waitlist-container" class="waitList-white">Adjust height text</div>
+                    <textarea name="chatLog" id="chat-log" readonly></textarea>
+                    <textarea placeholder="Type message.." id="message-input" name="chatInput"></textarea>
+                
+                    <button type="button" class="btn" id="send-button">Send</button>
+                    <button type="button" class="btn cancel" id="close-button" onclick="closeForm()">Close</button>
+                </form>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="text-center text-white mt-4" style="background-color: #9C634F;">
+                <div class="text-center p-3">
+                    © 2020 Copyright - 
+                    <a class="text-white" href="accessIndex.html">AcceptTheCookies</a>
+                </div>
+            </footer>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

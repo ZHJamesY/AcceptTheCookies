@@ -1,0 +1,20 @@
+[
+    {
+        "name": "M&Ms",
+        "price": 17.99,
+        "image": "images/samplecookie1.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "Oatmeal",
+        "price": 8.99,
+        "image": "images/samplecookie6.jpg",
+        "quantity": 5
+    },
+    {
+        "name": "Brown Sugar",
+        "price": 17.99,
+        "image": "images/samplecookie9.jpg",
+        "quantity": 2
+    }
+]

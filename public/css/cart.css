@@ -1,0 +1,39 @@
+body{
+    overflow-x: hidden;
+}
+
+.tableContainer{
+    padding: 40px;
+    margin: 40px;
+    background-color: white;
+    width: 40vw;
+}
+
+.tableContainer td:nth-child(1){
+    width: 20%;
+}
+
+.tableContainer td:nth-child(4){
+    width: 5%;
+}
+
+.checkoutContainer{
+    padding: 40px;
+    margin: 40px;
+    background-color: white;
+    width: 40vw;
+}
+
+.checkoutContainer tr{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    line-height: 30px;
+}
+
+.itemIcon{
+    width: 120px;
+}
+
+.cart-area{
+    min-height: 81vh;
+}

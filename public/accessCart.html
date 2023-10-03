@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Accept the Cookies</title>
+
+        <!-- Used code snippets from Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/cart.css">
+
+        <!-- Note: All images other than Logos are not ours, they all belong to their respective owners and we are only using it for the purpose of this project.-->
+    </head>
+    <body>
+        <div id = "main-section">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-fixed-top">
+                <div>
+                    <a class="navbar-brand text-white">
+                        <img class="px-1" src="images/cookieNavbar.png" alt="Company Logo" width="200">
+                    </a>
+                </div>
+
+                <div>
+                    <ul class="navbar-nav">
+                        <li class = "nav-item active">
+                            <a class = "nav-link" href = "index.html" id = "active">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "product.html">Products</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "about.html">About Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "contact.html">Contact Us</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "poll.html">Poll</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "group_members.html">Creators</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Cart Area -->
+            <div class="cart-area">
+                <div class="row gx-6">
+                    <div class="col">
+                        <div class="tableContainer">
+                            <h1>Your Items</h1>
+                            <table class="table table-hover table-light">
+                                <tbody id="cart-table">
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <!-- SPACER -->
+                    </div>
+
+                    <div class="col">
+                        <div class="checkoutContainer">
+                            <h1>Order Summary</h1>
+                            <table class="table table-light">
+                                <tbody>
+                                    <tr>
+                                        <td>(CUSTOMER AND ORDER INFORMATION)<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Subtotal: <a id="subtotal"></a><br>
+                                            GST/HST: <a id="gst"></a> <br>
+                                            Shipping: <a id="shipping"></a> <br>
+                                            Total: <a id="total"></a> <br>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-lg">Continue To Checkout</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>
+
+                </div>    
+            </div>
+            
+                
+            
+            <!-- Footer -->
+            <footer class="text-center text-white mt-4" style="background-color: #9C634F;">
+                <div class="text-center p-3">
+                    © 2020 Copyright - 
+                    <a class="text-white" href="index.html">AcceptTheCookies</a>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="https://kit.fontawesome.com/29befe8e62.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./js/cart.js"></script>
+    </body>
+</html>

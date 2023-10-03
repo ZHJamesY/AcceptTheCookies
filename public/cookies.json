@@ -1,0 +1,100 @@
+{
+    "cookies": [
+        {
+            "name": "M&Ms",
+            "price": 17.99,
+            "image": "images/samplecookie1.jpg",
+            "flavour": "Special",
+            "restrictions": ["Gluten-Free", "Nut-Free"],
+            "quantity": 3
+        },
+        {
+            "name": "Snickerdoodle",
+            "price": 23.99,
+            "image": "images/samplecookie2.jpg",
+            "flavour": "Sugar",
+            "restrictions": ["Nut-Free"],
+            "quantity": 7
+        },
+        {
+            "name": "Macademia Nut",
+            "price": 23.99,
+            "image": "images/samplecookie3.jpg",
+            "flavour": "Nuts",
+            "restrictions": ["Gluten-Free"],
+            "quantity": 6
+        },
+        {
+            "name": "Double Chocolate",
+            "price": 11.99,
+            "image": "images/samplecookie4.jpg",
+            "flavour": "Chocolate",
+            "restrictions": ["Gluten-Free", "Nut-Free"],
+            "quantity": 4
+        },
+        {
+            "name": "Christmas",
+            "price": 29.99,
+            "image": "images/samplecookie5.jpg",
+            "flavour": "Celebration",
+            "restrictions": ["Nut-Free"],
+            "quantity": 7
+        },
+        {
+            "name": "Oatmeal",
+            "price": 8.99,
+            "image": "images/samplecookie6.jpg",
+            "flavour": "Oatmeal",
+            "restrictions": ["Nut-Free", "Vegan"],
+            "quantity": 9
+        },
+        {
+            "name": "Ginger",
+            "price": 7.99,
+            "image": "images/samplecookie7.jpg",
+            "flavour": "Spices",
+            "restrictions": ["Nut-Free", "Vegan"],
+            "quantity": 3
+        },
+        {
+            "name": "Easter",
+            "price": 29.99,
+            "image": "images/samplecookie8.jpg",
+            "flavour": "Celebration",
+            "restrictions": ["Nut-Free"],
+            "quantity": 2
+        },
+        {
+            "name": "Brown Sugar",
+            "price": 17.99,
+            "image": "images/samplecookie9.jpg",
+            "flavour": "Sugar",
+            "restrictions": ["Nut-Free", "Gluten-Free", "Vegan"],
+            "quantity": 1
+        },
+        {
+            "name": "Chocolate Chip",
+            "price": 29.99,
+            "image": "images/samplecookie10.jpg",
+            "flavour": "Chocolate",
+            "restrictions": ["Nut-Free", "Gluten-Free", "Vegan"],
+            "quantity": 4
+        },
+        {
+            "name": "Birthday Cake",
+            "price": 19.99,
+            "image": "images/samplecookie11.jpg",
+            "flavour": "Celebration",
+            "restrictions": ["Nut-Free", "Gluten-Free", "Vegan"],
+            "quantity": 3
+        },
+        {
+            "name": "Chocolate Dip",
+            "price": 14.99,
+            "image": "images/samplecookie12.jpg",
+            "flavour": "Chocolate",
+            "restrictions": ["Nut-Free", "Vegan"],
+            "quantity": 2
+        }
+    ]
+}

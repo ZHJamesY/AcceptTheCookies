@@ -1,0 +1,62 @@
+html 
+    head
+        title= title 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="https://code.jquery.com/jquery-3.6.3.min.js")
+        script(src="./script/accessIndex.js")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/styles.css")
+    body 
+        nav.navbar.navbar-expand-lg.navbar-fixed-top
+            div
+                a.navbar-brand.text-white(href="#")
+                    img.px-1(src="images/cookieNavbar.png", alt="Company Logo", width="200")
+            div
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link#active(href="accessIndex.html") Home
+                    li.nav-item
+                        a.nav-link(href="accessProduct.html") Products
+                    li.nav-item
+                        a.nav-link(href="accessAbout.html") About Us
+                    li.nav-item
+                        a.nav-link(href="accessContact.html") Contact Us
+                    li.nav-item
+                        a.nav-link(href="accessPoll.html") Poll
+                    li.nav-item
+                        a.nav-link(href="accessGroupMembers.html") Creators
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(href='#', id='navbarDropdownMenuLink', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') My Account
+                        div.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='/accountInfo') Account
+                            a.dropdown-item(href='/logout') Sign out
+
+
+        div.container.mt-5
+            div.card
+                div.card-header.text-white
+                    h4 Account Information
+                div.card-body
+                  form(method='post', action='/accessAccountInfoUpdated', class="form",onsubmit='return validateForm()')
+                        div.form-group.row
+                            label.col-sm-3.col-form-label(for='inputUsername') Username
+                            div.col-sm-9
+                                input.form-control-plaintext#inputUsername(type='text', value=username, name='username')
+                        div.form-group.row
+                            label.col-sm-3.col-form-label(for='inputEmail') Email
+                            div.col-sm-9
+                                input.form-control-plaintext#inputEmail(type='email', value=email, readonly, name="email",style='outline: none;')
+                        div.form-group.row
+                            label.col-sm-3.col-form-label(for='inputPassword') Password
+                            div.col-sm-9
+                                input.form-control#inputPassword(type='password', placeholder='New password',name='password')
+                        div.form-group.row
+                            label.col-sm-3.col-form-label(for='inputConfirmPassword') Confirm Password
+                            div.col-sm-9
+                                input.form-control#inputConfirmPassword(type='password', placeholder='Confirm new password',name='confirmPassword')
+                        div.form-group.row
+                            div.col-sm-3
+                            div.col-sm-9
+                                button.btn.btn-primary(type='submit') Save Changes

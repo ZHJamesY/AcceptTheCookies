@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./js/poll.js" defer></script>
+    <script src="https://kit.fontawesome.com/cd56e8ce0b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/poll.css">
+    <script src="./script/accessIndex.js"></script>
+    <title>Poll</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
+        <div>
+            <a class="navbar-brand text-white">
+                <img class="px-1" src="images/cookieNavbar.png" alt="Company Logo" width="200">
+            </a>
+        </div>
+
+        <div>
+            <ul class="navbar-nav">
+                <li class = "nav-item active">
+                    <a class = "nav-link" href = "./accessIndex.html" >Home</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "./accessProduct.html">Products</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "./accessAbout.html">About Us</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "./accessContact.html">Contact Us</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "accessPoll.html" id = "active">Poll</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "accessGroupMembers.html">Creators</a>
+                </li>
+                    <!-- access dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/accountInfo">Account</a>
+                            <a class="dropdown-item" href="/logout">Sign out</a>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="content">
+        <!-- addition of government articles and link -->
+        <div id="articles">
+            <h2 id="gov_articles">Interesting Government Cookie Articles</h2>
+        </div>
+        <div id="poll">
+            <h2>Alcohol Cookie Poll</h2>
+        </div>
+        <!-- buttons to add to poll -->
+        <button class="btnPoll" type="button" id="addYes" onclick="addYes()">Yes</button>
+        <button class="btnPoll" type="button" id="addNo" onclick="addNo()">No</button>
+        <button class="btnPoll" type="button" id="addUnsure" onclick="addUnsure()">Don't Know</button>
+        <!-- creation of pie chart with voting data  -->
+        <div id="pollChart">
+            <svg width="600" height="500" id="pieChart"></svg>
+        </div>
+        <div id="currentNumPlots"></div>
+        <!-- table or list of top stats for cookies and sales numbers -->
+        <h2>Current Numbers</h2>
+        <div id="app">
+            <!-- shows table if showTable is true -->
+            <div v-if="showTable">
+                <table>
+                    <tr>
+                        <!-- allows for ordering cookies based on alphabetical order or number of sales -->
+                        <th @click="orderCookieNums('cookie')">Cookie Type  <i class="fa-solid fa-arrow-down-a-z"></i></th>
+                        <th @click="orderCookieNums('sales')">Number of Cookies Sold  <i class="fa-solid fa-arrow-down-9-1"></i></th>
+                    </tr>
+                    <tr v-for="num in sortedCookieData">
+                        <!-- displays all the cookie names and number of sales in a table  -->
+                        <td>{{num.cookie}}</td>
+                        <td>{{num.sales}}</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- shows summarized data as a list if showTable is false -->
+            <div v-else="showTable">
+                <h4><u>Top 3 Cookies:</u></h4>
+                <ol>
+                    <li>{{orderedCookies('sales')[0].cookie}} cookies with {{orderedCookies('sales')[0].sales}} sales!</li>
+                    <li>{{orderedCookies('sales')[1].cookie}} cookies with {{orderedCookies('sales')[1].sales}} sales!</li>
+                    <li>{{orderedCookies('sales')[2].cookie}} cookies with {{orderedCookies('sales')[2].sales}} sales!</li>
+                </ol>
+            </div>
+            <!-- botton that toggles between table and main stats  -->
+            <div id="numbersButtons">
+                <button @click="toggleTable">
+                    <span v-if="showTable">Show Main Stats</span>
+                    <span v-else>Show Table</span>
+                </button>
+            </div>
+            <!-- message to indicate what is currently being shown  -->
+            <div id="currentShowing"> 
+                    <div v-show="showTable">Currently showing table</div>
+                    <div v-show="!showTable">Currently showing stats</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-center text-white mt-4" style="background-color: #9C634F;">
+        <div class="text-center p-3">
+            © 2020 Copyright - 
+            <a class="text-white" href="accessIndex.html">AcceptTheCookies</a>
+        </div>
+    </footer>
+</body>
+
+</html>

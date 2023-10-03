@@ -1,0 +1,41 @@
+body{
+    background-color: #FFE6D6;
+}
+h2{
+    color: #1D82C9;
+}
+#content{
+    margin-top: 30px;
+    margin-left: 30%;
+}
+.btnPoll{
+    background-color: #A05A52;
+    border-radius: 8px;
+    margin-left: 90px;
+    padding-left: 20px;
+    padding-right: 20px
+}
+#app table{
+    margin-left: 110px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+#app th{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+#app td{
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+#app h4{
+    color: #1D82C9;
+}
+#numbersButtons{
+    margin-left: 230px;
+}
+#currentShowing{
+    margin-left: 200px;
+}
